@@ -13,4 +13,12 @@ function getPlayersApi() {
   return response;
 }
 
-export default getPlayersApi;
+function getGamesApi() {
+  const response = axios.get('https://www.balldontlie.io/api/v1/games', {
+    ...header,
+  });
+
+  return response;
+}
+
+export { getPlayersApi, getGamesApi };
