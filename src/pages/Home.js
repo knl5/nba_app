@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { PageContainer } from './styledComponents';
-import getTestApi from '../api';
+import { Menu } from '../components/Menu';
+import { getPlayersApi } from '../api';
 
 export function Home() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    getTestApi()
+    getPlayersApi()
       .then(d => {
         setData(d.data.data);
       })
@@ -18,7 +19,12 @@ export function Home() {
 
   console.log(data);
 
-  return <PageContainer>Test</PageContainer>;
+  return (
+    <div>
+      <Menu />
+      <PageContainer>Test</PageContainer>
+    </div>
+  );
 }
 
 export default Home;
