@@ -6,6 +6,7 @@ export function Menu() {
     <div>
       <Link to="/">Home</Link>
       <Link to="/games">Games</Link>
+      <Link to="/players">Players</Link>
     </div>
   );
 }
