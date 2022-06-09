@@ -6,7 +6,7 @@ import { colors } from '../colors';
 const transition = '200ms linear';
 
 export const ContainerGame = styled.div`
-	border-top: 1px solid red;
+	border-top: 1px solid ${colors.secondary};
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding: 1rem 1rem;
@@ -15,6 +15,7 @@ export const ContainerGame = styled.div`
 
 export const TeamTitle = styled.div`
 	font-size: 1rem;
+	opacity: 0.6;
 `;
 
 export const TeamContent = styled.p`
@@ -29,20 +30,21 @@ export const ContainerGamePart = styled.div`
 export const ContainerScore = styled.p`
 	font-size: 2rem;
 	font-weight: 600;
+	color: ${colors.tertiary}
 `;
 
 export const ContainerButton = styled.div`
 	width: fit-content;
 	padding: 0.5rem 0.8rem;
-	color: red;
-	border: 1px solid red;
+	color: ${colors.secondary};
+	border: 1px solid ${colors.secondary};
 	margin: 1rem auto;
 
 	&:hover {
-		background-color: red;
+		background-color: ${colors.secondary};
 		transition: ${transition};
 		cursor: pointer;
-		color: white;
+		color: ${colors.main};
 	}
 `;
 
@@ -56,6 +58,7 @@ export const PageContainer = styled.div`
 	flex-direction: column;
 	background-color: ${colors.main};
 	color: ${colors.secondary};
+	margin-top: 100px;
 `;
 
 export const PageTitle = styled.h1`
@@ -141,12 +144,18 @@ export const ContainerMenu = styled.header`
 	display: flex;
 	padding: 1rem 2rem;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
 `;
 
 export const MenuLink = styled(Link)`
 	text-decoration: none;
 	color: ${colors.secondary};
 	margin-right: 1rem;
+	font-size: 1.2rem;
 
 	&:hover {
 		opacity: 0.5;
