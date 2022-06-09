@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { getGamesApi } from '../api';
 import { Game, Menu } from '../components';
+import { PageContainer } from '../components/styledComponents';
 
 export function Games() {
   const [games, setGames] = useState(null);
@@ -17,12 +18,12 @@ export function Games() {
   }, []);
 	
   return(
-    <div>
+    <PageContainer>
       <Menu />
       {games && games.map(game => (
         <Game key={game.id} game={game}/>
       ))}
-    </div>
+    </PageContainer>
   );
 }
 
