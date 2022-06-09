@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { PageContainer } from './styledComponents';
+import { PageContainer } from '../components/styledComponents';
 import { Menu } from '../components/Menu';
 import { getPlayersApi } from '../api';
 
