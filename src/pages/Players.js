@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import { PageContainer, PageTitle, CardContainer, PlayerCard } from './styledComponents';
-import {DisplayPlayer} from '../components/Player';
-import getPlayersApi from '../api';
+import { PlayerCard, PageContainer } from '../components/styledComponents';
+import { DisplayPlayer } from '../components/Player';
+import { Menu } from '../components';
+import { getPlayersApi } from '../api';
 
 
-export function Player() {
+export function Players() {
   const [players, setPlayers] = useState();
   
   useEffect(() => {
@@ -17,25 +18,28 @@ export function Player() {
         console.error(e)
       );
   }, []);
-  
-  console.log(players);
     
   
   return (
-    <PageContainer>
-      <PageTitle>NBAs Players</PageTitle>
-      <CardContainer>
+    <div>
+      <Menu/>
+      <PageContainer>
         {players && players.map(player =>(
           <PlayerCard key={player.id}>
             <DisplayPlayer  player={player}/>
           </PlayerCard>
         ))
         } 
-      </CardContainer>
-    </PageContainer>
+      </PageContainer>
+      
+      
+      
+    </div>
+        
+    
   );
   
 } 
 
-export default Player;
+export default Players;
 
