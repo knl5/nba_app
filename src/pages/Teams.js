@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { PlayerCard, PageContainer } from '../components/styledComponents';
+import { PageContainer } from '../components/styledComponents';
 import { Team } from '../components/Team';
 import { Menu } from '../components';
 import { getTeamsApi } from '../api';
@@ -27,9 +27,7 @@ export function Teams() {
       <Menu/>
       <PageContainer>
         {teams && teams.map(team =>(
-          <PlayerCard key={team.id}>
-            <Team  team={team}/>
-          </PlayerCard>
+          <Team key={team.id} team={team}/>
         ))
         } 
       </PageContainer>

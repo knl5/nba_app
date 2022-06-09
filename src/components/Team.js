@@ -2,25 +2,49 @@
 import React from 'react';
 
 import {
-  ContainerGame,
-  TeamContent,
+  ContainerTeam,
+  TeamDivision,
+  DivisionTitle,
+  TeamName,
+  TeamInfo,
   TeamTitle,
-  ContainerGamePart,
+  TeamDisplay,
+  ConferenceTitle,
+  TeamConference,
 
 } from './styledComponents';
 
 export function Team({ team }) {
   return(
-    <ContainerGame>
-      <ContainerGamePart>
-        <TeamTitle>
-          Team : {team.name}
-        </TeamTitle>
-        <TeamContent>
-          {team.full_name} city: {team.city}
-        </TeamContent>
-      </ContainerGamePart>
-    </ContainerGame>
+    <ContainerTeam>
+
+      <TeamName>{team.name}</TeamName>
+
+      <TeamDisplay>
+        <DivisionTitle>
+      Division :
+          <TeamDivision>
+            {team.division}
+          </TeamDivision>
+        </DivisionTitle>
+
+        <ConferenceTitle>
+      Conference :
+          <TeamConference>
+            {team.conference}
+          </TeamConference>
+        </ConferenceTitle>
+
+        <TeamInfo>
+          <TeamTitle>
+        City:
+          </TeamTitle>
+        
+          {team.city} - {team.abbreviation}
+        </TeamInfo>
+      </TeamDisplay>
+      
+    </ContainerTeam>
   );
 }
 

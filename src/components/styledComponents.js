@@ -86,3 +86,50 @@ export const PlayerCard = styled.div`
 export const PlayerContent = styled.p`
 	font-size: 1.5rem;
 `;
+
+export const ContainerTeam = styled.div`
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	width: 100%;
+	align-items: center;
+	margin: 1.5rem;
+`;
+export const TeamDivision = styled.p`
+	font-size: 2rem;
+	font-weight: 600;
+`;
+
+export const DivisionTitle = styled.div`
+	font-size: 1rem;
+	flex-direction: column;
+`;
+
+export const TeamConference = styled.p`
+	font-size: 2rem;
+	font-weight: 600;
+`;
+export const ConferenceTitle = styled.div`
+	font-size: 1rem;
+	flex-direction: column;
+`;
+
+export const TeamDisplay = styled.div`
+ width: 70%;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ margin-left: 4rem;
+ 
+`;
+
+export const TeamName = styled.p`
+	font-size: 3rem;
+	font-weight: 600;
+	width: 25%;
+`;
+
+
+export const TeamInfo = styled.div`
+	font-size: 1rem;
+	font-weight: 600;
+`;
