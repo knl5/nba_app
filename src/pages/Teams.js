@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { PageContainer } from '../components/styledComponents';
-import { Team } from '../components/Team';
-import { Menu } from '../components';
+import { Team, Menu } from '../components';
 import { getTeamsApi } from '../api';
 
 
