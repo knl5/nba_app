@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { colors } from '../colors';
 
@@ -132,4 +133,35 @@ export const TeamName = styled.p`
 export const TeamInfo = styled.div`
 	font-size: 1rem;
 	font-weight: 600;
+`;
+export const ContainerMenu = styled.header`
+	width: 100%;
+	height: auto;
+	background-color: ${colors.main};
+	display: flex;
+	padding: 1rem 2rem;
+	align-items: center;
+`;
+
+export const MenuLink = styled(Link)`
+	text-decoration: none;
+	color: ${colors.secondary};
+	margin-right: 1rem;
+
+	&:hover {
+		opacity: 0.5;
+		transition: ${transition};
+	}
+`;
+
+export const ContainerLogo = styled.div`
+	width: 30px;
+	height: auto;
+	margin-right: 1rem;
+`;
+
+export const Logo = styled.svg`
+	background: transparent;
+	width: 100%;
+	height: auto;
 `;
