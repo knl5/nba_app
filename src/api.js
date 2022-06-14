@@ -29,4 +29,12 @@ function getTeamsApi() {
   return response;
 }
 
-export { getPlayersApi, getGamesApi, getTeamsApi };
+function getGameStats({ gameId }) {
+  const response = axios.get(`https://www.balldontlie.io/api/v1/stats?seasons[]=2018&game_ids[]=${gameId}`, {
+    ...header,
+  });
+
+  return response;
+}
+
+export { getPlayersApi, getGamesApi, getTeamsApi, getGameStats };

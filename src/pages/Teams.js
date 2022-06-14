@@ -39,11 +39,9 @@ export function Teams() {
         <Filters filter={teams} />
         <PageContainer flex={true}>
           {teams && teams.map(team => {
-            if(team.division === 'Central') {
-              return (
-                <Team key={team.id} team={team} />
-              );
-            }
+            return (
+              <Team key={team.id} team={team} />
+            );
           })
           } 
         </PageContainer>
