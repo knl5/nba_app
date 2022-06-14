@@ -9,8 +9,9 @@ export const ContainerGame = styled.div`
 	border-top: 1px solid ${colors.secondary};
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	padding: 1rem 1rem;
+	padding: 1rem 50px;
 	align-items: center;
+	margin: 0 50px;
 `;
 
 export const TeamTitle = styled.div`
@@ -19,7 +20,8 @@ export const TeamTitle = styled.div`
 `;
 
 export const TeamContent = styled.p`
-	font-size: 1.5rem;
+	font-size: 2rem;
+	font-weight: 600;
 `;
 
 export const ContainerGamePart = styled.div`
@@ -28,7 +30,7 @@ export const ContainerGamePart = styled.div`
 `;
 
 export const ContainerScore = styled.p`
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	color: ${colors.tertiary}
 `;

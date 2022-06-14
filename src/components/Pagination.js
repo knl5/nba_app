@@ -9,7 +9,6 @@ export function Pagination({ pages }) {
   function createArray() {
     for(let i = 0; i < pages - 2030 ; i++) {
       setPagesArray([...pagesArray, i]);
-      console.log(i, pagesArray);
     }
   }
 
