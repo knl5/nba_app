@@ -11,7 +11,6 @@ import {
   TeamDisplay,
   ConferenceTitle,
   TeamConference,
-
 } from './styledComponents';
 
 export function Team({ team }) {
