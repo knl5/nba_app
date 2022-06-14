@@ -14,7 +14,7 @@ export function DisplayPlayer({player}) {
     <CardContainer>
       <PlayerContent>{player.first_name} {player.last_name} </PlayerContent>
       <TeamContent>
-            Team : {player.team.full_name}
+        🏀 {player.team.full_name}
       </TeamContent>
     </CardContainer>
   );

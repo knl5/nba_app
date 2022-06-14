@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Statitic } from '../components';
+import { Statistic } from '../components';
 
 export function Statistics() {
   return(
-    <Statitic />
+    <Statistic />
   );
 }

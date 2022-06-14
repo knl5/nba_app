@@ -27,7 +27,7 @@ export function Game({ game }) {
       </ContainerGamePart>
       <ContainerGamePart>
         <TeamTitle>
-          Final score
+          🏆 Final score
         </TeamTitle>
         <ContainerScore>
           {game.home_team_score} - {game.visitor_team_score}

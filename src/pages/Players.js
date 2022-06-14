@@ -18,6 +18,7 @@ export function Players() {
         console.error(e)
       );
   }, []);
+  console.log(getPlayersApi);
     
   
   return (
