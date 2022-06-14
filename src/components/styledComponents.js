@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { colors } from '../colors';
@@ -53,9 +53,20 @@ export const PageContainer = styled.div`
 	width: 100%;
 	height: 100%;
 	padding: 5px;
-	font-size: 12px;
+
+	${({flex}) => flex ? css`
 	display: flex;
 	flex-direction: column;
+	` :
+    css`
+		display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+	`}
+	font-size: 12px;
+	
 	background-color: ${colors.main};
 	color: ${colors.secondary};
 	margin-top: 100px;
@@ -95,9 +106,10 @@ export const ContainerTeam = styled.div`
 	display: flex;
 	flex-direction: row;
 	height: auto;
-	width: 100%;
+	width: 90%;
 	align-items: center;
-	margin: 1.5rem;
+	padding: 30px;
+	border-bottom: 1px solid white;
 `;
 export const TeamDivision = styled.p`
 	font-size: 2rem;

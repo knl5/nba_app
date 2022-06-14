@@ -1,43 +1,59 @@
 import React, { useEffect, useState } from 'react';
 
 import { PageContainer } from '../components/styledComponents';
-import { Team, Menu } from '../components';
+import { Team, Menu, Filters } from '../components';
 import { getTeamsApi } from '../api';
 
 
 export function Teams() {
   const [teams, setTeams] = useState();
-  
+  const [filtersValues, setFiltersValues] = useState();
+  // const [selected, setSelected] = useState();
+
   useEffect(() => {
     getTeamsApi()
-      .then(t => {
-        setTeams(t.data.data);
-      })
+      .then(result => 
+        setTeams(result.data.data)
+        // console.log(teams);
+      )
       .catch(e =>
         console.error(e)
       );
   }, []);
 
-  console.log(teams);
+  function cleanData() {
+    setFiltersValues([...new Set(teams)]);
+    console.log(filtersValues);
+  }
+
+  useEffect(() => {
+    cleanData();
+  }, []);
+     
+
+  if(teams) {
+    return(
+
+      <div>
+        <Menu/>
+        <Filters filter={teams} />
+        <PageContainer flex={true}>
+          {teams && teams.map(team => {
+            if(team.division === 'Central') {
+              return (
+                <Team key={team.id} team={team} />
+              );
+            }
+          })
+          } 
+        </PageContainer>
+      </div>
+    );
+  }
     
-  
   return (
-    <div>
-      <Menu/>
-      <PageContainer>
-        {teams && teams.map(team =>(
-          <Team key={team.id} team={team}/>
-        ))
-        } 
-      </PageContainer>
-      
-      
-      
-    </div>
-        
-    
+    <p>chargement...</p>
   );
-  
 } 
 export default Teams;
 

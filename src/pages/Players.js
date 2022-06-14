@@ -23,7 +23,7 @@ export function Players() {
   return (
     <div>
       <Menu/>
-      <PageContainer>
+      <PageContainer flex={false} >
         {players && players.map(player =>(
           <PlayerCard key={player.id}>
             <DisplayPlayer  player={player}/>
