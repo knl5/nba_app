@@ -18,7 +18,7 @@ export function Games() {
   }, []);
 	
   return(
-    <PageContainer>
+    <PageContainer flex={true}>
       <Menu />
       {games && games.map(game => (
         <Game key={game.id} game={game}/>
