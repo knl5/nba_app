@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom';
 
 import { Home, Games, Players, Teams } from './pages';
-import { Statistics } from './pages/Statistics';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Route path="/games" element={<Games />} />
         <Route path="/players" element={<Players />} />
         <Route path="/teams" element={<Teams />} />
-        <Route path="/statistics" element={<Statistics />} />
       </Routes>
     </Router>
   );
