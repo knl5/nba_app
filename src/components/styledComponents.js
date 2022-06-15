@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import img from '../assets/background-image.jpg';
 import { Link } from 'react-router-dom';
 
 import { colors } from '../colors';
@@ -74,12 +75,17 @@ export const PageContainer = styled.div`
 	margin-top: 100px;
 `;
 
+export const TitleContainer = styled.div`
+	display: flex;
+	margin: 350px 0;
+	justify-content: center;
+`;
+
 export const PageTitle = styled.h1`
-	font-size: 2rem;
+	font-size: 4rem;
 	font-family: helvetica;
 	font-weight: bold;
 	color: ${colors.secondary};
-	align-self: center;
 `;
 
 
@@ -89,6 +95,7 @@ export const CardContainer = styled.div`
 	grid-template: repeat(, 1fr);
   grid-gap: 30px 50px;
   grid-auto-rows: minmax(100px, auto);
+	align-items: center;
 	`;
 
 export const PlayerCard = styled.div`
@@ -96,12 +103,16 @@ export const PlayerCard = styled.div`
 	height: auto;
 	padding: 10px;
 	margin: 10px;
-	background-color: ${colors.tertiary};
-	color: ${colors.main};
+	background-color: ${colors.main};
+	border: 1px solid white;
+	color: ${colors.secondary};
 	text-align: center;
 `;
 export const PlayerContent = styled.p`
-	font-size: 1.5rem;
+	font-size: 2rem;
+	border-bottom: 1px solid white;
+	padding: 40px 0;
+	color: ${colors.tertiary};
 `;
 
 export const ContainerTeam = styled.div`
@@ -111,6 +122,7 @@ export const ContainerTeam = styled.div`
 	width: 90%;
 	align-items: center;
 	padding: 30px;
+	margin: 0 50px;
 	border-bottom: 1px solid white;
 `;
 export const TeamDivision = styled.p`
@@ -187,4 +199,12 @@ export const Logo = styled.svg`
 	background: transparent;
 	width: 100%;
 	height: auto;
+`;
+export const BackgroundHome = styled.div`
+	background-image: url(${img});
+  width: 100%;
+  background-size: cover;
+  min-height: 795px;
+  background-position-x: right;
+  background-position-y: center;
 `;
